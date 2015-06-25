@@ -15,6 +15,33 @@ var About = React.createClass({
             <header>
               <h1>Jason Adkison</h1>
               <p className="intro-text">Full Stack Web Developer</p>
+
+              <div className="intro-text">
+                <br/>
+
+                <a href="#"><i className="fa fa-file-pdf-o"></i> Curricula Vitae</a>
+
+                <br/><br/>
+
+                Ruby / Ruby on Rails,
+                PHP / CakePHP,
+                Wordpress,
+                HTML5 / CSS3,
+                Sass,
+                Bootstrap,
+                Responsive Design,
+                ReactJS,
+                NodeJS,
+                Grunt,
+                Browserify,
+                Javascript / jQuery / AJAX,
+                Handlebars,
+                MVC / REST,
+                Agile Development,
+                Git, Github & Gitflow,
+                Unix-based systems (Mac OS X, Ubuntu),
+                MySQL, MongoDB
+              </div>
             </header>
 
           </div>
