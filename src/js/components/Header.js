@@ -10,8 +10,20 @@ var Header = React.createClass({
   },
   onMenuTogglerClick: function(e) {
     e.preventDefault();
+    if (this.state.menuOpen) {
+      this.closeMenu();
+    } else {
+      this.openMenu();
+    }
+  },
+  openMenu: function() {
     this.setState({
-      menuOpen: !this.state.menuOpen
+      menuOpen: true
+    });
+  },
+  closeMenu: function() {
+    this.setState({
+      menuOpen: false
     });
   },
   render: function() {
@@ -34,12 +46,16 @@ var Header = React.createClass({
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
               </button>
-              <h1 className="logo"><a href="#intro" className="link animate active" rel="home" title="Jason Adkison">JA</a></h1>
+              <h1 className="logo">
+                <Link to="about" smooth={true} offset={-70} duration={500} onClick={this.closeMenu} className="link animate active" rel="home" title="Jason Adkison">
+                  JA
+                </Link>
+              </h1>
             </div>
             <div className={menuClass} ref="menu">
               <ul className="nav navbar-nav">
                 <li>
-                  <Link to="about" smooth={true} offset={-70} duration={500}>
+                  <Link to="about" smooth={true} offset={-70} duration={500} onClick={this.closeMenu}>
                     About Me
                   </Link>
                 </li>
@@ -51,12 +67,12 @@ var Header = React.createClass({
                 </li>
                 */}
                 <li>
-                  <Link to="work" smooth={true} offset={-70} duration={500}>
+                  <Link to="work" smooth={true} offset={-70} duration={500} onClick={this.closeMenu}>
                     My Work
                   </Link>
                 </li>
                 <li>
-                  <Link to="contact" smooth={true} offset={-70} duration={500}>
+                  <Link to="contact" smooth={true} offset={-70} duration={500} onClick={this.closeMenu}>
                     Get in Touch
                   </Link>
                 </li>
