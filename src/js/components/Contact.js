@@ -20,7 +20,7 @@ var Contact = React.createClass({
 
               <div className="col-md-3 col-sm-6 item email">
                 <h2>E-mail:</h2>
-                <p><a href="mailto:hello@jasonadkison.com">hello@jasonadkison.com</a></p>
+                <p><a href="mailto:jadkison@gmail.com">jadkison@gmail.com</a></p>
               </div>
 
               <div className="col-md-3 col-sm-6 item skype">
