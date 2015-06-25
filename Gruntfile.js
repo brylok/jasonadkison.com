@@ -12,7 +12,8 @@ module.exports = function(grunt) {
         files: [
           {expand: true, cwd: 'src/', src: ['**', '!*.scss'], dest: 'build/'},
           {expand: true, cwd: 'node_modules/font-awesome/fonts/', src: ['**'], dest: 'build/fonts/', flatten: true},
-          {expand: true, cwd: 'images', src: ['**'], dest: 'build/images/'}
+          {expand: true, cwd: 'images', src: ['**'], dest: 'build/images/'},
+          {expand: true, cwd: 'docs', src: ['**'], dest: 'build/docs/'}
         ]
       },
       dist: {
@@ -91,6 +92,20 @@ module.exports = function(grunt) {
           port: '2222'
         }
       }
+    },
+    uglify: {
+      dist: {
+        files: {
+          'dist/js/bundle.js': ['build/js/bundle.js']
+        }
+      }
+    },
+    cssmin: {
+      dist: {
+        files: {
+          'dist/css/main.css': ['build/css/main.css']
+        }
+      }
     }
   });
   
@@ -101,6 +116,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-http-server');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-rsync');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   grunt.registerTask('default', [
     'clean:main',
@@ -120,6 +137,8 @@ module.exports = function(grunt) {
     'sass',
     'clean:dist',
     'copy:dist',
+    'uglify:dist',
+    'cssmin:dist',
     'rsync:prod']
   );
 

@@ -19,7 +19,7 @@ var About = React.createClass({
               <div className="intro-text">
                 <br/>
 
-                <a href="#"><i className="fa fa-file-pdf-o"></i> Curricula Vitae</a>
+                <a href="//www.jasonadkison.com/docs/jason_adkison_cv_2015_07.pdf"><i className="fa fa-file-pdf-o"></i> Curricula Vitae</a>
 
                 <br/><br/>
 
