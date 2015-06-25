@@ -4,11 +4,13 @@ var Route = Router.Route;
 var DefaultRoute = Router.DefaultRoute;
 var Link = Router.Link;
 var RouteHandler = Router.RouteHandler;
+var NotFoundRoute = Router.NotFoundRoute;
 
 var Header = require('./components/Header');
 var Footer = require('./components/Footer');
 
-var HomeRoute = require('./components/HomeRoute');
+var HomePage = require('./components/HomePage');
+var NotFoundPage = require('./components/NotFoundPage');
 
 var App = React.createClass({
 
@@ -36,7 +38,8 @@ var App = React.createClass({
 
 var routes = (
   <Route handler={App} path="/">
-    <DefaultRoute handler={HomeRoute} />
+    <DefaultRoute handler={HomePage} />
+    <NotFoundRoute handler={NotFoundPage} />
   </Route>
 );
 
