@@ -37,6 +37,11 @@ em, i {
   font-style: italic;
 }
 
+.responsive-img {
+  height: auto;
+  max-width: 100%;
+}
+
 .group:after {
   display: table;
   clear: both;
@@ -356,6 +361,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     .copyright {
       text-align: center;
     }
+  }
+}
+
+
+#about {
+  header, h1 {
+    text-align: left;
   }
 }
 

@@ -13,35 +13,40 @@ var About = React.createClass({
           <div className="wrapper">
 
             <header>
-              <h1>Jason Adkison</h1>
-              <p className="intro-text">Full Stack Web Developer</p>
+              <div className="row">
+                <div className="col-sm-3">
+                  <img src="/images/jadkison_gta.jpg" alt="Jason GTA Style Avatar" className="responsive-img" />
+                </div>
+                <div className="col-sm-9">
+                  <h1>Jason Adkison</h1>
+                  <p className="intro-text">Full Stack Web Developer</p>
+                  <a href="//www.jasonadkison.com/docs/jason_adkison_cv_2015_07.pdf"><i className="fa fa-file-pdf-o"></i> Curricula Vitae</a>
 
-              <div className="intro-text">
-                <br/>
+                  <br/><br/>
 
-                <a href="//www.jasonadkison.com/docs/jason_adkison_cv_2015_07.pdf"><i className="fa fa-file-pdf-o"></i> Curricula Vitae</a>
-
-                <br/><br/>
-
-                Ruby / Ruby on Rails,
-                PHP / CakePHP,
-                Wordpress,
-                HTML5 / CSS3,
-                Sass,
-                Bootstrap,
-                Responsive Design,
-                ReactJS,
-                NodeJS,
-                Grunt,
-                Browserify,
-                Javascript / jQuery / AJAX,
-                Handlebars,
-                MVC / REST,
-                Agile Development,
-                Git, Github & Gitflow,
-                Unix-based systems (Mac OS X, Ubuntu),
-                MySQL, MongoDB
+                  Ruby / Ruby on Rails,
+                  PHP / CakePHP,
+                  Wordpress,
+                  HTML5 / CSS3,
+                  Sass,
+                  Bootstrap,
+                  Responsive Design,
+                  ReactJS,
+                  NodeJS,
+                  Grunt,
+                  Browserify,
+                  Javascript / jQuery / AJAX,
+                  Handlebars,
+                  MVC / REST,
+                  Agile Development,
+                  Git, Github & Gitflow,
+                  Unix-based systems (Mac OS X, Ubuntu),
+                  MySQL, MongoDB,
+                  Deployments,
+                  Capistrano
+                </div>
               </div>
+
             </header>
 
           </div>
